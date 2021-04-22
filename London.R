@@ -43,11 +43,8 @@ summary(london_crime$Borough)
 
 # Question 5
 # Display the MajorCategory variable data in a pie chart
-piechart <- table(london_crime$MajorCategory)
-lbls <- paste(names(piechart), "\n", piechart, sep="")
-pie(piechart, labels = lbls,
-    main="MajorCategory")
-# which major category had the highest level of crimes
-# which major category had the lowest level of crimes.
+x <- c(london_crime$MajorCategory)
+piechart(x, labels = names(x), edges = 200, radius = 0.8,
+         density = NULL, angle = 45, col = NULL, main = NULL, ...)
 
 # Question 6
